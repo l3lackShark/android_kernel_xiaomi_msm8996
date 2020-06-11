@@ -303,7 +303,10 @@ static const char * const fw_path[] = {
 	"/lib/firmware/updates",
 	"/lib/firmware/" UTS_RELEASE,
 	"/lib/firmware",
-	"/firmware/" UTS_RELEASE,
+    "/lib64/firmware",
+	"/lib/firmware/image",
+#ifdef CONFIG_ANDROID
+    "/firmware/" UTS_RELEASE,
 	"/firmware",
 	"/firmware/image/" UTS_RELEASE,
 	"/firmware/image",
@@ -315,6 +318,7 @@ static const char * const fw_path[] = {
 	"/system/vendor/firmware",
 	"/odm/firmware/" UTS_RELEASE,
 	"/odm/firmware",
+#endif
 };
 
 /*
